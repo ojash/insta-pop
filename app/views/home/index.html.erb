@@ -1,0 +1,6 @@
+<%@data["data"].each do |temp|%>
+  <%=image_tag(temp["images"]["thumbnail"]["url"])%>
+  <%if temp["type"] == "video"%>
+  <%=video_tag(temp["videos"]["low_resolution"]["url"])%>
+  <%end%>
+<%end%>

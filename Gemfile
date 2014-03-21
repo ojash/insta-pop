@@ -32,6 +32,13 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'httparty'
+gem 'pry-rails'
+gem 'better_errors'
+gem 'pry-nav'
+gem 'binding_of_caller'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
