@@ -1,6 +1,32 @@
+<div class="main-div">
+<table>
+  <tr>
+  <%i = 1%>
 <%@data["data"].each do |temp|%>
-  <%=image_tag(temp["images"]["thumbnail"]["url"])%>
-  <%if temp["type"] == "video"%>
-  <%=video_tag(temp["videos"]["low_resolution"]["url"])%>
+    <td class="img-space">
+      <div class = "image-wrapper">
+      <div class = "image">
+      <%=image_tag(temp["images"]["low_resolution"]["url"])%>
+      </div>
+      <div class="share">
+        <%=image_tag("fbme.png")%>
+        <%=image_tag("twt.png")%><br>
+        <%=image_tag(temp["user"]["profile_picture"], height: '50%', width: '50%')%><br>
+        <%=temp["user"]["full_name"] rescue nil%><br>
+        @<%=temp["user"]["username"] rescue nil%><br>
+        <%=temp["likes"]["count"] rescue 0%> likes <br>
+        <%=temp["comments"]["count"] rescue nil%> comments
+
+      </div>
+    </div>
+      <div class="desc">
+        <%=temp["caption"]["text"] rescue nil%>
+      </div>
+    </td>
+    <%if i%2 == 0%>
+    </tr><tr>
   <%end%>
+  <%i+=1%>
 <%end%>
+</table>
+</div>

@@ -11,3 +11,28 @@
  *= require_self
  *= require_tree .
  */
+
+ body{
+  background-color:#f6e7d2;
+  width: 100%;
+ }
+ .main-div{
+  background-color: #01b6ad;
+  width: 1000px;
+  margin: 0 auto;
+ }
+.img-space{
+  background-color: #0a4958;
+  width: 500px;
+}
+.image-wrapper{
+  overflow: hidden;
+}
+.image{
+  width: 310;
+  float: left;
+}
+.share{
+  width: 190;
+  float: right;
+}
