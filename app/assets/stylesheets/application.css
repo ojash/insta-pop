@@ -33,6 +33,14 @@
   float: left;
 }
 .share{
+  background-color: red;
   width: 190;
   float: right;
+}
+.profile-image{
+  display: inline-block;
+  float: right;
+  border-radius: 70px;
+ -webkit-border-radius: 70px;
+ -moz-border-radius: 70px;
 }
