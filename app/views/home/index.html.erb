@@ -4,22 +4,28 @@
   <%i = 1%>
 <%@data["data"].each do |temp|%>
     <td class="img-space">
-      <div class = "image-wrapper">
-      <div class = "image">
-      <%=image_tag(temp["images"]["low_resolution"]["url"])%>
-      </div>
-      <div class="share">
+      <div class="top-info">
         <%=image_tag(temp["user"]["profile_picture"], height: '70px', width: '70px', class: 'profile-image')%>
-        <%=temp["user"]["full_name"] rescue nil%><br>
-        @<%=temp["user"]["username"] rescue nil%><br>
-        <%=temp["likes"]["count"] rescue 0%> likes <br>
+        <span class = "uname">
+          <%=temp["user"]["full_name"] rescue nil%>
+          <br><i>@<%=temp["user"]["username"] rescue nil%></i>
+        </span>
+      </div>
+      <div class = "image-wrapper">
+        <div class = "image">
+          <%=image_tag(temp["images"]["low_resolution"]["url"])%>
+        </div>
+        <div class = "share">
+        <%=temp["likes"]["count"] rescue 0%> likes<br>
         <%=temp["comments"]["count"] rescue 0%> comments
-
       </div>
-    </div>
+      </div>
       <div class="desc">
-        <%=temp["caption"]["text"] rescue nil%>
-      </div>
+        <%description = temp["caption"]["text"].strip rescue "No description available"%>
+          <p><%=description[0..200]%>
+            <%="..." if description.length > 200%>
+          </p>
+        </div>
     </td>
     <%if i%2 == 0%>
     </tr><tr>
