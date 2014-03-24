@@ -9,12 +9,22 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require social-share-button
  *= require_tree .
  */
 
  body{
   background-color:#f6e7d2;
   width: 100%;
+ }
+ table{
+  border-spacing:0px;
+ }
+ td{
+  border-left: 5px solid #f6e7d2;
+ }
+ p{
+  text-align: justify;
  }
  .main-div{
   /*background-color: #01b6ad;*/
@@ -88,4 +98,8 @@
   display: inline-block;
   vertical-align: middle;
   line-height: normal; 
+}
+.heart{
+  font-size: 30px;
+  color: red;
 }

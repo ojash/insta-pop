@@ -37,6 +37,7 @@ gem 'pry-rails'
 gem 'better_errors'
 gem 'pry-nav'
 gem 'binding_of_caller'
+gem 'social-share-button'
 
 
 # Use ActiveModel has_secure_password

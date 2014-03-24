@@ -16,8 +16,9 @@
           <%=image_tag(temp["images"]["low_resolution"]["url"])%>
         </div>
         <div class = "share">
-        <%=temp["likes"]["count"] rescue 0%> likes<br>
-        <%=temp["comments"]["count"] rescue 0%> comments
+          <%= social_share_button_tag("", :url => temp["link"]) %>
+        <span class="heart">&hearts;</span><%=temp["likes"]["count"] rescue 0%> likes<br>
+        <span class="heart">&#164;</span><%=temp["comments"]["count"] rescue 0%> comments
       </div>
       </div>
       <div class="desc">
