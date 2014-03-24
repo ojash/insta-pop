@@ -13,12 +13,12 @@
       </div>
       <div class = "image-wrapper">
         <div class = "image">
-          <%=image_tag(temp["images"]["low_resolution"]["url"])%>
+          <%=image_tag(temp["images"]["low_resolution"]["url"], class: 'hover')%>
         </div>
         <div class = "share">
           <%= social_share_button_tag("", :url => temp["link"]) %>
-        <span class="heart">&hearts;</span><%=temp["likes"]["count"] rescue 0%> likes<br>
-        <span class="heart">&#164;</span><%=temp["comments"]["count"] rescue 0%> comments
+        <span class="likes-text"><%=temp["likes"]["count"] rescue 0%> Likes</span>
+        <span class="likes-text"><%=temp["comments"]["count"] rescue 0%> Comments</span>
       </div>
       </div>
       <div class="desc">

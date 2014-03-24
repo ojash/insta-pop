@@ -15,3 +15,16 @@
 //= require turbolinks
 //= require_tree .
 //= require social-share-button
+
+var scroll = 0
+$(document).on("scroll",function(){
+  if (scroll > 0){
+    console.log("disabled");
+    $(".hover").addClass("disable-hover");
+  }
+  scroll++;
+});
+$(document).on("scrollstop",function(){
+  console.log("enabled");
+  $(".hover").removeClass("disable-hover");
+});

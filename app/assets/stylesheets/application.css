@@ -65,6 +65,11 @@
  -webkit-border-radius: 10px;
  -moz-border-radius: 10px;
 }
+.image img:hover{
+  cursor: pointer;
+  box-shadow: 2px 2px 5px #0D252A;
+  border: 1px solid #0A7189;
+}
 .desc{
   margin: 5px;
   padding: 5px;
@@ -99,7 +104,13 @@
   vertical-align: middle;
   line-height: normal; 
 }
-.heart{
-  font-size: 30px;
-  color: red;
+.likes-text{
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+  }
+
+  .disable-hover,.disable-hover * {
+  pointer-events: none !important;
 }
