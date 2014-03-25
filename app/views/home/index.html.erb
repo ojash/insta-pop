@@ -42,7 +42,9 @@
         </span>
         <%if temp["location"] && temp["location"]["longitude"] && temp["location"]["latitude"]%>
         <%i_location = temp["location"]["latitude"].to_s+","+temp["location"]["longitude"].to_s%>
-        <%=image_tag('http://maps.googleapis.com/maps/api/staticmap?center='+i_location+'&zoom=9&size=150x150&sensor=false&markers=color:blue%7Clabel:A%7C'+i_location+'&key=AIzaSyCVsglLfTKpvPly89-ilYZVIBaxEffpicY', :class => "hover map")%>
+        <%s_map = 'http://maps.googleapis.com/maps/api/staticmap?center='+i_location+'&zoom=9&size=150x150&sensor=false&markers=color:blue%7Clabel:A%7C'+i_location+'&key=AIzaSyCVsglLfTKpvPly89-ilYZVIBaxEffpicY'%>
+        <%l_map = 'http://maps.googleapis.com/maps/api/staticmap?center='+i_location+'&zoom=14&size=640x480&sensor=false&markers=color:blue%7Clabel:A%7C'+i_location+'&key=AIzaSyCVsglLfTKpvPly89-ilYZVIBaxEffpicY'%>
+        <%=link_to image_tag(s_map, :class => "hover map"),l_map, class: "fancybox hover"%>
         <%end%>
       </div>
       </div>
