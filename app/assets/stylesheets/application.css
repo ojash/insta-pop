@@ -142,27 +142,3 @@ vertical-align:middle;
   .disable-hover,.disable-hover * {
   pointer-events: none !important;
 }
-
-* {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-.container {
-    position: relative;
-    display: inline-block;
-}
-.video img {
-    z-index: 9;
-}
-.play {
-    background: url('https://cdn3.iconfinder.com/data/icons/iconic-1/32/play_alt-64.png') center center no-repeat;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 70px;
-    height: 70px;
-    margin: -35px 0 0 -35px;
-    z-index: 10;
-    cursor: pointer;
-}

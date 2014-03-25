@@ -20,10 +20,8 @@
             <%=link_to image_tag(temp["images"]["low_resolution"]["url"], :class => "hover"), temp["images"]["standard_resolution"]["url"], class: "fancybox hover"%>
           </div>
         <%elsif temp["type"] == "video"%>
-          <div class = "video image container">
-            <%g_link = 'http://cdn.livestream.com/chromelessPlayer/examples/jwplayer/players/player.swf?file='+temp["videos"]["low_resolution"]["url"]%>
-            <%=link_to image_tag(temp["images"]["low_resolution"]["url"],:class => "hover"),g_link , class: "fancybox hover"%>
-            <div class="play"></div>
+          <div class = "image">
+            <%=video_tag(temp["videos"]["low_resolution"]["url"],:size=>"306x306",:controls => true, :class => "hover")%>
           </div>
         <%end%>
         
@@ -44,7 +42,7 @@
         </span>
         <%if temp["location"] && temp["location"]["longitude"] && temp["location"]["latitude"]%>
         <%i_location = temp["location"]["latitude"].to_s+","+temp["location"]["longitude"].to_s%>
-        <%=image_tag('http://maps.googleapis.com/maps/api/staticmap?center='+i_location+'&zoom=9&size=150x150&sensor=false&markers=color:blue%7Clabel:A%7C'+i_location, :class => "hover map")%>
+        <%=image_tag('http://maps.googleapis.com/maps/api/staticmap?center='+i_location+'&zoom=9&size=150x150&sensor=false&markers=color:blue%7Clabel:A%7C'+i_location+'&key=AIzaSyCVsglLfTKpvPly89-ilYZVIBaxEffpicY', :class => "hover map")%>
         <%end%>
       </div>
       </div>
