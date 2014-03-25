@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require_tree .
 //= require social-share-button
+//= require fancybox
 
 var scroll = 0
 $(document).on("scroll",function(){

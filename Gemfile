@@ -38,7 +38,7 @@ gem 'better_errors'
 gem 'pry-nav'
 gem 'binding_of_caller'
 gem 'social-share-button'
-
+gem 'fancybox-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
