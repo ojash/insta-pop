@@ -28,3 +28,6 @@ $(document).on("scrollstop",function(){
   console.log("enabled");
   $(".hover").removeClass("disable-hover");
 });
+$(document).ready(function(){
+$(".ui-loader").remove();
+});

@@ -70,6 +70,18 @@
   box-shadow: 2px 2px 5px #0D252A;
   border: 1px solid #0A7189;
 }
+.map{
+  margin-top: 5px;
+  border: 1px solid #0E343D;
+  border-radius: 5px;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+}
+.map:hover{
+  cursor: pointer;
+  box-shadow: 2px 2px 5px #0D252A;
+  border: 1px solid #0A7189;
+}
 .desc{
   margin: 5px;
   padding: 5px;
@@ -104,13 +116,52 @@
   vertical-align: middle;
   line-height: normal; 
 }
+.uname a{
+  color: #CED1FA;
+  text-decoration: none;
+}
 .likes-text{
   color: white;
   font-weight: bold;
   font-size: 16px;
   display: block;
+  /*line-height: auto;*/
   }
-
+.likes-text img{
+vertical-align:middle;
+}
+.likes-text a{
+  text-decoration: none;
+  color: white;
+}
+.likes-text a:hover, .uname a:hover{
+  cursor: pointer;
+  color: rgb(252, 216, 169);
+}
   .disable-hover,.disable-hover * {
   pointer-events: none !important;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.container {
+    position: relative;
+    display: inline-block;
+}
+.video img {
+    z-index: 9;
+}
+.play {
+    background: url('https://cdn3.iconfinder.com/data/icons/iconic-1/32/play_alt-64.png') center center no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin: -35px 0 0 -35px;
+    z-index: 10;
+    cursor: pointer;
 }
